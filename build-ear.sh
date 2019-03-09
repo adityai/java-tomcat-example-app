@@ -1,2 +1,2 @@
-docker build -f Dockerfile.build -t examples-app-builder .
+docker run -it -v `pwd`:/usr/src/app examples-app-builder mvn clean package
 
