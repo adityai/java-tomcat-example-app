@@ -1,6 +1,6 @@
-FROM open-liberty:webProfile8
+FROM tomcat
 MAINTAINER Aditya Inapurapu adityaii@gmail.com
-ADD ./target/*.ear /config/dropins/
-
-EXPOSE 9080
+EXPOSE 8080
+ADD ./target/*.ear /usr/local/tomcat/webapps/
 CMD ["catalina.sh", "run"]
+
