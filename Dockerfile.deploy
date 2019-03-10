@@ -1,6 +1,6 @@
-FROM websphere-liberty:latest
+FROM open-liberty:webProfile8
 MAINTAINER Aditya Inapurapu adityaii@gmail.com
 ADD ./target/*.ear /config/dropins/
 
-EXPOSE 8080
+EXPOSE 9080
 CMD ["catalina.sh", "run"]
