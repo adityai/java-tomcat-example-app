@@ -1,5 +1,6 @@
-FROM tomcat
+FROM websphere-liberty:latest
 MAINTAINER Aditya Inapurapu adityaii@gmail.com
+ADD ./target/*.ear /config/dropins/
+
 EXPOSE 8080
-ADD ./target/*.ear /usr/local/tomcat/webapps/
 CMD ["catalina.sh", "run"]
